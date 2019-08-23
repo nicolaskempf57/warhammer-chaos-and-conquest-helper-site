@@ -10,7 +10,9 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "commit": "git-cz"
+    "commit": "git-cz",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "private": true,
   "dependencies": {
@@ -39,10 +41,17 @@
     "@angular/compiler": "~8.1.2",
     "@angular/compiler-cli": "~8.1.2",
     "@angular/language-service": "~8.1.2",
+    "@babel/core": "^7.5.5",
     "@ionic/angular-toolkit": "~2.0.0",
+    "@storybook/addon-actions": "^5.1.11",
+    "@storybook/addon-links": "^5.1.11",
+    "@storybook/addon-notes": "^5.1.11",
+    "@storybook/addons": "^5.1.11",
+    "@storybook/angular": "^5.1.11",
     "@types/jasmine": "~3.3.8",
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "~8.9.4",
+    "babel-loader": "^8.0.6",
     "codelyzer": "^5.0.0",
     "cz-conventional-changelog": "^3.0.2",
     "jasmine-core": "~3.4.0",
