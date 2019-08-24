@@ -13,3 +13,12 @@ ion-split-pane {
 .split-pane-md.split-pane-visible>.split-pane-side {
   max-width: 200px;
 }
+
+ion-grid {
+  --ion-grid-width-xl: 960px;
+}
+
+ion-toolbar {
+  --background: var(--ion-color-secondary);
+  --color: var(--ion-color-secondary-contrast);
+}
