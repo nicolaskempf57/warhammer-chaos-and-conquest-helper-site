@@ -1,0 +1,24 @@
+ion-menu {
+  --width: 200px
+}
+
+ion-menu ion-content {
+  --background: var(--ion-color-lighter);
+  --ion-item-background: var(--ion-color-lighter);
+}
+
+ion-split-pane {
+  --border: none;
+}
+.split-pane-md.split-pane-visible>.split-pane-side {
+  max-width: 200px;
+}
+
+ion-grid {
+  --ion-grid-width-xl: 960px;
+}
+
+ion-toolbar {
+  --background: var(--ion-color-secondary);
+  --color: var(--ion-color-secondary-contrast);
+}
