@@ -12,5 +12,9 @@ ion-card-content ion-avatar {
 
 ion-toolbar {
   --background: var(--ion-color-secondary);
-  --color: var(--ion-color-secondary-contrast);
+  --color: var(--ion-color-secondary-contrast)
+}
+
+ion-grid {
+  --ion-grid-width-xl: 960px;
 }
