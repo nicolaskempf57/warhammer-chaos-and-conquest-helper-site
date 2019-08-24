@@ -12,24 +12,25 @@
 <ion-content>
     <ion-grid fixed>
       <ion-row class="ion-justify-content-center">
-        <ion-card class="welcome-card">
-          <img src="https://www.huntedcow.com/cdn/img/media/warhammer/_logo.png" alt="warhammer logo" />
+        <ion-card class="welcome-card" *ngFor="let article of articles">
+          <img [src]="article.featuredImage.url" alt="warhammer logo" />
           <ion-card-header>
-            <ion-card-title>Welcome to Ionic</ion-card-title>
+            <ion-card-title>{{article.title}}</ion-card-title>
           </ion-card-header>
           <ion-card-content>
             <ion-grid>
-              <ion-row>
-                <p>Now that your app has been created, you'll want to start building out features and components. Check out some of the resources below for next steps.</p>
-              </ion-row>
               <ion-row class="ion-align-items-center">
+                <ion-col size="12" [innerHTML]="article.excerpt"></ion-col>
                 <ion-col size="auto">
                   <ion-avatar>
-                    <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y"/>
+                    <img *ngIf="article.createdBy.avatar; else defaultAvatar" [src]="article.createdBy.avatar"/>
+                    <ng-template #defaultAvatar>
+                      <img src="assets/avatar.png"/>
+                    </ng-template>
                   </ion-avatar>
                 </ion-col>
                 <ion-col>
-                  <div>Nicolas KEMPF</div>
+                  <div>{{article.createdBy.first_name}} {{article.createdBy.last_name}}</div>
                 </ion-col>
               </ion-row>
             </ion-grid>
